@@ -12,7 +12,7 @@ const BlogPostCard = ({
   return (
     <div
       className='group relative overflow-hidden rounded-lg border
-     border-gray-200 bg-white shadow-md transition-all hover:shadow-lg'
+     border-gray-200 bg-white shadow-md transition-all hover:shadow-md'
     >
       <Link href={`/post/${id}`} className='block w-full h-full'>
         <div className='relative h-48 w-full overflow-hidden'>
