@@ -3,9 +3,14 @@ import Link from 'next/link';
 import { prisma } from '../utils/db';
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 import BlogPostCard from '@/components/general/BlogPostCard';
+import { BlogPost } from '../types/blogPost';
 
-const getBlogPosts = async ({ userId }: { userId?: string }) => {
-  await new Promise((resolve, reject) => setTimeout(resolve, 2000));
+const getBlogPosts = async ({
+  userId,
+}: {
+  userId?: string;
+}): Promise<BlogPost[]> => {
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   const data = await prisma.blogPost.findMany({
     where: { authorId: userId },
     orderBy: { createdAt: 'desc' },

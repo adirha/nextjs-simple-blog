@@ -2,7 +2,7 @@ import BlogPostCard from '@/components/general/BlogPostCard';
 import { Suspense } from 'react';
 import { prisma } from './utils/db';
 
-const getData = async () => {
+const getData = async (): Promise<any[]> => {
   await new Promise((resolve) => setTimeout(resolve, 2000));
   const data = await prisma.blogPost.findMany({
     select: {

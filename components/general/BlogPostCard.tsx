@@ -1,4 +1,4 @@
-import { BlogPost } from '@/lib/generated/prisma';
+import { BlogPost } from '@/app/types/blogPost';
 import Image from 'next/image';
 import Link from 'next/link';
 
